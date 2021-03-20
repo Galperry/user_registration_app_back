@@ -21,6 +21,7 @@ app.get('/userlist', (req, res) => {
 })
 
 app.post('/adduser', (req, res) => {
+    console.log(req.body)
     let currentUsers = JSON.parse(fs.readFileSync('users.json'))
     const newUser = req.body
     let {username, email, age} = newUser
